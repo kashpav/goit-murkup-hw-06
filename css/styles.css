@@ -146,11 +146,15 @@ margin-right: 93px;
     display: block;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background: var(--accent-color);
+}
+
+.curent {
+    color: var(--accent-color);
 }
 
 
@@ -185,13 +189,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .header-link:hover,
 .header-link:focus {
-    transition-property: color;
     color: var(--accent-color);
 }
 
 .contact:hover,
 .contact:focus {
-    transition-property: color;
     color: var(--accent-color);
 }
 
@@ -241,7 +243,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     padding: 10px 32px 10px 32px;
     min-width: 200px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border: 1 solid black;
+    border: transparent;
 }
 
 /* ---advantages section--- */
@@ -316,6 +318,32 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.03em;
     color: var(--header-color);
     margin-bottom: 50px;
+}
+
+.about-item {
+    position: relative;
+    display: flex;
+}
+
+.about-solutions {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+
+    background: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--second-header-color)
 }
 
 /* ---team section--- */
@@ -452,7 +480,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .clients-link:hover,
 .clients-link:focus {
-    transition-property: color, border;
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
@@ -561,7 +588,6 @@ box-sizing: content-box;
 
 .footer-soc-link:hover,
 .footer-soc-link:focus {
-    transition-property: background-color;
     background-color: var(--accent-color);
 }
 
@@ -593,9 +619,6 @@ box-sizing: content-box;
 
 .btn:hover,
 .btn:focus {
-    transition-property: color,
-    background-color,
-    box-shadow;
     background-color: var(--accent-color);
     color: #FFFFFF;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -702,6 +725,7 @@ box-sizing: content-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 textarea {
@@ -832,7 +856,6 @@ textarea {
 }
 
 .project:hover {
-    transition-property: box-shadow;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -889,7 +912,11 @@ textarea {
     color: #FFFFFF;
     background: rgba(33, 150, 243, 0.9);
 }
+
 .project:hover .products-cover-text {
-    transition-property: transform;
+    transform: translateY(-100%);
+}
+
+.project-item:focus .products-cover-text {
     transform: translateY(-100%);
 }
