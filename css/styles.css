@@ -677,7 +677,7 @@ box-sizing: content-box;
     margin-left: 10px;
 }
 
-/* Modal-window */
+/* -----Modal-window----- */
 
 .backdrop {
     position: fixed;
@@ -773,11 +773,14 @@ textarea {
     padding: 12px 16px;
     }
 
-.form-field input::placeholder {
+.comment-field {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.17;
+    line-height: 14px;
     letter-spacing: 0.01em;
+}
+
+.comment-field::placeholder {
     color: rgba(117, 117, 117, 0.5);
 }
 
@@ -809,9 +812,14 @@ textarea {
 }
 
 .form-policy input{
-    margin-top: 4px;
-    margin-bottom: 4px;
+    display: flex;
     margin-right: 10px;
+    align-content: center;
+}
+
+.form-policy input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }
 
 /* ----Projects----- */
