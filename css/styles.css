@@ -66,7 +66,7 @@ ul, ol{
     justify-content: center;
     align-items: center
     width: 36px;
-    hight: 32px;
+    hieght: 32px;
     color: var(--text-color);
 }
 
@@ -726,6 +726,14 @@ box-sizing: content-box;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition-duration: 250ms;
+    transition-property: fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:focus,
+.close-button:hover {
+    fill: var(--accent-color);
 }
 
 textarea {
@@ -749,7 +757,9 @@ textarea {
     flex-direction: column;
     margin-right: 40px;
     margin-left: 40px;
-    
+    transition-duration: 250ms;
+    transition-property: fill;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field + .form-field {
@@ -772,6 +782,9 @@ textarea {
     box-sizing: border-box;
     border-radius: 4px;
     height: 40px;
+    transition-duration: 250ms;
+    transition-property: border;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .form-input:focus ~ .form-field-icon {
@@ -789,13 +802,17 @@ textarea {
 
 
 
-/* .form-field textarea { */
+/* .form-field textarea  */
+
 .comment-field {
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     height: 120px;
     padding: 12px 16px;
+    transition-duration: 250ms;
+    transition-property: border;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .comment-field:focus-within {
@@ -837,7 +854,110 @@ textarea {
     color: var(--text-color);
 }
 
-.form-policy {
+.form-field-check {
+    display: flex;
+    /* outline: 1px solid seagreen; */
+    margin-top: 20px;
+    height: 24px;
+    margin-bottom: 30px;
+    margin-left: 62px;
+    }
+
+    .modal-check-text {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        color: #555555;
+    }
+
+    .modal-check-text span {
+        width: 16px;
+        height: 15px;
+        border: 2px solid #303030;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+        margin-right: 5px;
+        transition-duration: 250ms;
+        transition-property: border background-color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-check-icon {
+        fill: #ffffff; 
+        /* transition-duration: 2550ms;
+        transition-property: border;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    } 
+
+    .modal-check:checked + .modal-check-text span {
+        background-color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+    }
+
+    /* .modal-check:checked + .modal-check-text .modal-check-icon {
+        fill: #ffffff;
+    } */
+
+    .modal-check-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71px;
+        letter-spacing: 0.03em;
+        color: #757575;
+    }
+
+    
+
+/* .modal-check-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}  */
+
+/* .modal-check-text::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    flex-direction: row;
+} */
+
+.policy-accent {
+    display: block;
+    padding-left: 3px;
+    text-decoration: none;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+
+/* .main-btn {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    padding: 10px 32px 10px 32px;
+    min-width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: transparent;
+} */
+
+/* .form-policy {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
@@ -845,9 +965,9 @@ textarea {
     margin-left: 51px;
     justify-content: center;
     
-}
+} */
 
-.form-policy label {
+/* .form-policy label {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -864,7 +984,7 @@ textarea {
 .form-policy input[type="checkbox"] {
     width: 20px;
     height: 20px;
-}
+} */
 
 /* ----Projects----- */
 

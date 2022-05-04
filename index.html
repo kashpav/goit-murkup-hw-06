@@ -463,15 +463,36 @@
                                 </svg>
                             </span>
                         </div>
+                        
                         <div class="form-field form-comment">
                             <label for="comment">Комментарий</label>
                             <textarea class="comment-field" name="comment" id="comment" placeholder="Введите текст" cols="30" rows="10"></textarea>
                         </div>
-                        <div class="form-policy">
-                            <input type="checkbox" name="policy" value="" id="policy">
-                            <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="" class="policy-accent">Условия договора</a></label>
+                        
+                        <div class="form-field-check">
+                            <input 
+                            type="checkbox"
+                            class="modal-check visually-hidden" 
+                            name="policy" 
+                            id="modal-check"
+                            />
+                            <label for="modal-check" class="modal-check-text"                            
+                            >
+                            <span class="modal-check-icon">
+                                <svg class="icon-input" width="16" height="15">
+                                    <use href="./images/icons/symbol-defs.svg#icon-check"></use>
+                                </svg>
+                            </span>Соглашаюсь с рассылкой и принимаю <a href=""class="policy-accent link">Условия договора</span>
+                            </label>
                         </div>
-                        <div class="form-field form-btn">
+
+                        <!-- <label class="label">
+                            <input class="checkbox" type="checkbox" name="policy" value="" />
+                            <span class="icon"></span>
+                            Соглашаюсь с и принимаю Условия договора 
+                        </label> -->
+
+                        <div class="form-btn main-btn">
                             <button type="submit">Отправить</button>
                         </div>
                     </form>
