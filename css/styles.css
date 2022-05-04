@@ -756,22 +756,66 @@ textarea {
     margin-top: 12px;
 } 
 
-.form-field input {
+/* .form-field input {
     margin: 0;
-    padding: 0;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 40px; 
+}  */
+
+.form-input {
+    margin: 0;
+    padding: 12px 16px 12px 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     height: 40px;
 }
 
-.form-field textarea {
+/* .form-input:focus ~ .form-field-icon {
+    fill: var(--accent-color);
+}  працює*/
+
+.form-field:focus-within {
+    fill: var(--accent-color);
+}
+
+.form-input:focus-within {
+    border: 1px solid rgba(33, 150, 243, 1);
+    outline: transparent;
+}
+
+
+
+/* .form-field textarea { */
+.comment-field {
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     height: 120px;
     padding: 12px 16px;
     }
+
+.comment-field:focus-within {
+    border: 1px solid rgba(33, 150, 243, 1);
+    outline: transparent;
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-field-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-11px) translateX(12px);
+}
 
 .comment-field {
     font-weight: 400;
