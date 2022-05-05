@@ -68,14 +68,6 @@ ol {
     border-bottom: 1px solid #EEEEEE;
 }
 
-.header-contact-block {
-    display: flex;
-    justify-content: center;
-    align-items: center width: 36px;
-    hieght: 32px;
-    color: var(--text-color);
-}
-
 .header-contacts {
     display: flex;
     align-items: center;
